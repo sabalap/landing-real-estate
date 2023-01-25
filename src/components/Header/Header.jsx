@@ -11,7 +11,7 @@ import mc from "../../assets/images/mc.png";
 const Header = () => {
   return (
     <header className="bg-[#FFFCFA]">
-      <nav className="pt-9 w-[97.5rem] mx-auto flex justify-between items-center">
+      <nav className="pt-9 2xl:w-[97.5rem] 2xl:px-0 px-12 mx-auto flex justify-between items-center">
         <img className="img" src={logo} alt="Logo" />
         <ul className="w-[27.375rem] flex justify-between font-bold text-base">
           <li>Partners</li>
@@ -24,7 +24,7 @@ const Header = () => {
         </button>
       </nav>
       <section>
-        <div className="mb-[3.125rem] flex w-[97.5rem] mx-auto mt-[15.19rem] justify-between">
+        <div className="2xl:mb-[3.125rem] mb-[5.125rem] flex 2xl:gap-0 gap-20 2xl:w-[97.5rem] 2xl:px-0 px-12 mx-auto mt-[15.19rem] justify-between">
           <div>
             <h1 className="w-[37rem] text-[4.5rem] font-bold mb-10 leading-[5.625rem]">
               Save 70% of your resource with AR tools
@@ -47,7 +47,7 @@ const Header = () => {
             <img src={ARImage} alt="AR" />
           </div>
         </div>
-        <div className="flex justify-between w-[97.5rem] mx-auto">
+        <div className="flex justify-between 2xl:w-[97.5rem] 2xl:px-0 px-12 mx-auto">
           <div>
             <h2 className="w-[38.875rem] mb-10 text-[3.5rem] leading-[4.75rem] font-bold">
               Partnership program in Arttteo
@@ -66,15 +66,47 @@ const Header = () => {
         </div>
       </section>
       <section className="border-t border-[#cccccc] h-[17.4375rem] items-center flex">
-        <div className="flex justify-between w-[97.5rem] mx-auto">
-          <img src={marketer} alt="marketer logo" />
-          <img src={visa} alt="visa logo" />
-          <img src={forbes} alt="forbes logo" />
-          <img src={entrepreneur} alt="entrepreneur logo" />
-          <img src={uber} alt="uber logo" />
-          <img src={microsoft} alt="microsoft logo" />
-          <img src={ripple} alt="ripple logo" />
-          <img src={mc} alt="mc logo" />
+        <div className="flex justify-between 2xl:w-[97.5rem] lg:w-full 2xl:px-0 px-12 mx-auto">
+          <img
+            className="w-28 h-28 2xl:w-auto 2xl:h-auto"
+            src={marketer}
+            alt="marketer logo"
+          />
+          <img
+            className="w-28 h-28 2xl:w-auto 2xl:h-auto"
+            src={visa}
+            alt="visa logo"
+          />
+          <img
+            className="w-28 h-28 2xl:w-auto 2xl:h-auto"
+            src={forbes}
+            alt="forbes logo"
+          />
+          <img
+            className="w-28 h-28 2xl:w-auto 2xl:h-auto"
+            src={entrepreneur}
+            alt="entrepreneur logo"
+          />
+          <img
+            className="w-28 h-28 2xl:w-auto 2xl:h-auto"
+            src={uber}
+            alt="uber logo"
+          />
+          <img
+            className="w-28 h-28 2xl:w-auto 2xl:h-auto"
+            src={microsoft}
+            alt="microsoft logo"
+          />
+          <img
+            className="w-28 h-28 2xl:w-auto 2xl:h-auto"
+            src={ripple}
+            alt="ripple logo"
+          />
+          <img
+            className="w-28 h-28 2xl:w-auto 2xl:h-auto"
+            src={mc}
+            alt="mc logo"
+          />
         </div>
       </section>
     </header>

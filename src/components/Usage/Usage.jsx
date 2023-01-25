@@ -5,7 +5,7 @@ import arrow from "../../assets/images/arrow-right.png";
 const Resources = () => {
   return (
     <section className="bg-[#000] py-40">
-      <div className="w-[97.5rem] mx-auto">
+      <div className="2xl:w-[97.5rem] mx-auto 2xl:px-0 px-12">
         <div className="flex justify-between items-center mb-[7.1875rem]">
           <div>
             <h1 className="text-white font-bold w-[17.375rem] text-4xl leading-[3.06rem]">
@@ -22,7 +22,7 @@ const Resources = () => {
         <div>
           <div className="flex items-center mb-12">
             <img className="mr-8" src={img1} alt="" />
-            <h1 className="font-medium text-4xl leading-[3.05rem] text-white">
+            <h1 className="font-medium 2xl:text-4xl lg:text-2xl leading-[3.05rem] text-white">
               How your system works is primarily determined by what....
             </h1>
             <button className="mr-auto ml-4 w-[7.315rem] font-bold text-black text-base bg-white h-10 rounded-[6.1875rem]">
@@ -34,7 +34,7 @@ const Resources = () => {
           </div>
           <div className="flex items-center mb-12">
             <img className="mr-8" src={img2} alt="" />
-            <h1 className="font-medium text-4xl leading-[3.05rem] text-white">
+            <h1 className="font-medium 2xl:text-4xl lg:text-2xl leading-[3.05rem] text-white">
               What equipment will you need in your physical...
             </h1>
             <button className="mr-auto ml-4 w-[7.715rem] font-bold text-black text-base bg-white h-10 rounded-[6.1875rem]">
@@ -46,7 +46,7 @@ const Resources = () => {
           </div>
           <div className="flex items-center">
             <img className="mr-8" src={img3} alt="" />
-            <h1 className="font-medium text-4xl leading-[3.05rem] text-white">
+            <h1 className="font-medium 2xl:text-4xl lg:text-2xl leading-[3.05rem] text-white">
               When designing your AR instance, you need to know the speed...
             </h1>
             <button className="mr-auto ml-4 w-[5.3125rem] font-bold text-black text-base bg-white h-10 rounded-[6.1875rem]">

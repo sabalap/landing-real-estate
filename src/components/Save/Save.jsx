@@ -5,14 +5,14 @@ import tablet2 from "../../assets/images/tablet2.png";
 const Save = () => {
   return (
     <section className="bg-black h-[67.5rem]">
-      <div className="w-[99rem] mx-auto relative py-36 h-full">
+      <div className="2xl:w-[99rem] 2xl:px-0 px-12 mx-auto relative py-36 h-full">
         <img src={tablet1} alt="" />
         <img
           className="absolute bottom-36 left-20 mt-10"
           src={mobile2}
           alt=""
         />
-        <h1 className="text-center -mt-[6.175rem] mx-auto w-[65.1875rem] text-[6rem] font-bold text-white">
+        <h1 className="text-center -mt-[6.175rem] mx-auto w-[65.1875rem] 2xl:w-auto lg:w-[35rem] 2xl:text-[6rem] lg:text-[4rem] font-bold text-white">
           Save 70% of your resource{" "}
           <span className="text-[#00C1CC]">with AR tools</span>
         </h1>
@@ -33,7 +33,11 @@ const Save = () => {
           </div>
         </div>
         <img className="absolute top-36 right-20" src={mobile1} alt="" />
-        <img className="absolute bottom-36 right-0" src={tablet2} alt="" />
+        <img
+          className="absolute bottom-36 2xl:right-0 lg:right-12"
+          src={tablet2}
+          alt=""
+        />
       </div>
     </section>
   );

@@ -6,7 +6,7 @@ import readnowMobile from "../../assets/images/readnowMobile.png";
 const Resources = () => {
   return (
     <section className="bg-[#FFFCFA] py-40">
-      <div className="w-[97.5rem] mx-auto">
+      <div className="2xl:w-[97.5rem] mx-auto 2xl:px-0 px-12">
         <div className="flex justify-between items-center mb-[5.5rem]">
           <div>
             <h1 className="w-[38.375rem] font-bold text-black text-[3.5rem] leading-[4.75rem]">
@@ -31,7 +31,7 @@ const Resources = () => {
               <h2 className="font-medium text-2xl leading-9 text-black">
                 Real estate is home to dreamers, designers, and builders
               </h2>
-              <div className="flex items-end h-[61%]">
+              <div className="flex items-end 2xl:h-[61%] lg:h-[44%]">
                 <div className="flex items-center gap-3">
                   <img src={readnow} alt="" />
                   <h3 className="text-black font-bold text-base">Read Now</h3>
@@ -39,13 +39,17 @@ const Resources = () => {
               </div>
             </div>
             <img
-              className="rounded-tr-2xl rounded-br-2xl"
+              className="rounded-tr-2xl rounded-br-2xl 2xl:w-auto 2xl:h-auto lg:w-[20rem]"
               src={hashtag}
               alt=""
             />
           </div>
           <div className="relative">
-            <img className="rounded-2xl" src={phone1} alt="" />
+            <img
+              className="rounded-2xl 2xl:h-auto lg:h-full"
+              src={phone1}
+              alt=""
+            />
             <img
               className="absolute bottom-8 left-8"
               src={readnowMobile}
@@ -56,7 +60,11 @@ const Resources = () => {
             </h3>
           </div>
           <div className="relative">
-            <img className="rounded-2xl" src={phone2} alt="" />
+            <img
+              className="rounded-2xl 2xl:h-auto lg:h-full"
+              src={phone2}
+              alt=""
+            />
             <img
               className="absolute bottom-8 left-8"
               src={readnowMobile}

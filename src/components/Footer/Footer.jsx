@@ -5,7 +5,7 @@ import footerLogo from "../../assets/images/footer-logo.png";
 const Footer = () => {
   return (
     <footer className="bg-black pt-20">
-      <div className="w-[97.5rem] mx-auto">
+      <div className="2xl:w-[97.5rem] 2xl:px-0 px-12 mx-auto">
         <div className="flex pb-[5.4375rem]">
           <div>
             <h2 className="mb-6 font-bold text-white text-4xl">
