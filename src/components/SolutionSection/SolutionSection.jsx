@@ -1,54 +1,125 @@
-import itConsulting from "../../assets/images/it-consulting.png";
-import softwareDevelopment from "../../assets/images/software-development.png";
-import tech from "../../assets/images/tech.png";
+import arBuilding from "../../assets/images/ar-building.png";
+import interior from "../../assets/images/interior.png";
+import xr from "../../assets/images/xr.png";
+import { useState } from "react";
 const SolutionSection = () => {
+  const [active, setActive] = useState(1);
+  const entToEndHandler = () => {
+    setActive(1);
+  };
+  const augmentingHandler = () => {
+    setActive(2);
+  };
+  const technicalHandler = () => {
+    setActive(3);
+  };
   return (
-    <section className="bg-[#CBE2F9] pb-40">
-      <div className="2xl:w-[97.5rem] w-full mx-auto pt-40 2xl:px-0 px-12">
+    <section className="bg-[#CBE2F9] pt-[11.625rem] pb-36">
+      <div className="2xl:w-[97.5rem] 2xl:px-0 px-12 mx-auto">
         <h3 className="font-bold text-lg mb-4">Benefits</h3>
-        <div className="flex justify-between items-center">
-          <h2 className="text-4xl font-medium">Our solutions:</h2>
+        <div className="flex justify-between items-center mb-[5.5rem]">
+          <h2 className="text-4xl font-medium">What is AR in Real Estate:</h2>
           <button className="w-[11.8125rem] font-bold text-black text-base bg-transparent border-2 h-16 border-black rounded-xl">
-            Book a Call
+            Talk to us
           </button>
         </div>
-        <div className="mt-[7.5rem] flex lg:justify-between">
-          <div className="border-[#A2B5C7] 2xl:w-[32.5rem] border-l 2xl:pl-[3.75rem] pl-[1.75rem] pr-[1.75rem] 2xl:pr-0 h-[53.0625rem]">
-            <h3 className="mb-9 font-medium text-lg text-[#67737F]">01</h3>
-            <img src={itConsulting} alt="it consulting" />
-            <h1 className="2xl:text-[3.5rem] lg:text-[2.5rem] w-[18.875rem] mt-12 mb-6 font-bold leading-[4.75rem]">
-              IT Consulting
-            </h1>
-            <p className="font-medium text-lg text-[#778A9C] 2xl:w-[25rem] lg:w-[20rem] leading-[1.875rem]">
-              Measure and report greenhouse gas emissions on a regular basis.
-            </p>
+        <div className="pb-[4rem]">
+          <div className="flex gap-16 border-b border-[#A2B5C7] h-[4rem]">
+            <h2
+              onClick={entToEndHandler}
+              className={`${
+                active === 1
+                  ? "cursor-pointer text-2xl text-black font-bold"
+                  : "cursor-pointer text-2xl text-[#778A9C] font-bold"
+              }`}
+            >
+              End-to-End Development
+            </h2>
+            <h2
+              onClick={augmentingHandler}
+              className={`${
+                active === 2
+                  ? "cursor-pointer text-2xl text-black font-bold"
+                  : "cursor-pointer text-2xl text-[#778A9C] font-bold"
+              }`}
+            >
+              Augmenting Teams
+            </h2>
+            <h2
+              onClick={technicalHandler}
+              className={`${
+                active === 3
+                  ? "cursor-pointer text-2xl text-black font-bold"
+                  : "cursor-pointer text-2xl text-[#778A9C] font-bold"
+              }`}
+            >
+              Technical Expertise
+            </h2>
           </div>
-          <div className="border-[#A2B5C7] 2xl:w-[32.5rem] border-l 2xl:pl-[3.75rem] pl-[1.75rem] pr-[1.75rem] 2xl:pr-0 h-[53.0625rem]">
-            <h3 className="mb-9 font-medium text-lg text-[#67737F]">02</h3>
-            <img src={softwareDevelopment} alt="sofware development" />
-            <h1 className="2xl:text-[3.5rem] lg:text-[2.5rem] w-[18.875rem] mt-12 mb-6 font-bold leading-[4.75rem]">
-              End-to-end Software Development
-            </h1>
-            <p className="font-medium text-lg text-[#778A9C] 2xl:w-[25rem] lg:w-[20rem] leading-[1.875rem]">
-              Implement decarbonization strategies in line with the Paris
-              Agreement through business change and innovations, including
-              efficiency improvements, renewable energy, materials reductions,
-              and other carbon emission elimination strategies.
-            </p>
-          </div>
-          <div className="border-[#A2B5C7] 2xl:w-[32.5rem] border-l 2xl:pl-[3.75rem] pl-[1.75rem] pr-[1.75rem] 2xl:pr-0 h-[53.0625rem]">
-            <h3 className="mb-9 font-medium text-lg text-[#67737F]">03</h3>
-            <img src={tech} alt="tech" />
-            <h1 className="2xl:text-[3.5rem] lg:text-[2.5rem] w-[18.875rem] mt-12 mb-6 font-bold leading-[4.75rem]">
-              Immersive Tech Consulting
-            </h1>
-            <p className="font-medium text-lg text-[#778A9C] 2xl:w-[25rem] lg:w-[20rem] leading-[1.875rem]">
-              Neutralize any remaining emissions with additional, quantifiable,
-              real, permanent, and socially beneficial offsets to achieve
-              net-zero annual carbon emissions by 2040.
-            </p>
-          </div>
+          <div className="bg-black h-[0.1875rem] w-[18.3125rem] -mt-[0.05rem]"></div>
         </div>
+        {active === 1 && (
+          <div className="flex justify-between">
+            <div className="2xl:w-[31.1875rem] w-[24rem] 2xl:h-[28.5625rem] bg-white rounded-2xl p-16">
+              <img className="mb-12" src={arBuilding} alt="" />
+              <h3 className="font-bold 2xl:text-4xl text-xl mb-6">
+                AR Building App for Sales Team
+              </h3>
+              <p className="2xl:text-lg text-base font-medium text-[#677788]">
+                Some description about benefit
+              </p>
+            </div>
+            <div className="2xl:w-[31.1875rem] w-[24rem] 2xl:h-[28.5625rem] bg-white rounded-2xl p-16">
+              <img className="mb-12" src={interior} alt="" />
+              <h3 className="font-bold 2xl:text-4xl text-xl mb-6">
+                Interior Design
+              </h3>
+              <p className="2xl:text-lg text-base font-medium text-[#677788]">
+                Some description about benefit
+              </p>
+            </div>
+            <div className="2xl:w-[31.1875rem] w-[24rem] 2xl:h-[28.5625rem] bg-white rounded-2xl p-16">
+              <img className="mb-12" src={xr} alt="" />
+              <h3 className="font-bold 2xl:text-4xl text-xl mb-6">
+                Construction XR Training Product
+              </h3>
+              <p className="2xl:text-lg text-base font-medium text-[#677788]">
+                Some description about benefit
+              </p>
+            </div>
+          </div>
+        )}
+        {active === 2 && (
+          <div className="flex justify-between">
+            <div className="2xl:w-[31.1875rem] w-[24rem] 2xl:h-[28.5625rem] bg-white rounded-2xl p-16">
+              <img className="mb-12" src={arBuilding} alt="" />
+              <h3 className="font-bold 2xl:text-4xl text-xl mb-6">
+                AR Building App for Sales Team
+              </h3>
+              <p className="2xl:text-lg text-base font-medium text-[#677788]">
+                Some description about benefit
+              </p>
+            </div>
+            <div className="2xl:w-[31.1875rem] w-[24rem] 2xl:h-[28.5625rem] bg-white rounded-2xl p-16">
+              <img className="mb-12" src={interior} alt="" />
+              <h3 className="font-bold 2xl:text-4xl text-xl mb-6">
+                Interior Design
+              </h3>
+              <p className="2xl:text-lg text-base font-medium text-[#677788]">
+                Some description about benefit
+              </p>
+            </div>
+            <div className="2xl:w-[31.1875rem] w-[24rem] 2xl:h-[28.5625rem] bg-white rounded-2xl p-16">
+              <img className="mb-12" src={xr} alt="" />
+              <h3 className="font-bold 2xl:text-4xl text-xl mb-6">
+                Construction XR Training Product
+              </h3>
+              <p className="2xl:text-lg text-base font-medium text-[#677788]">
+                Some description about benefit
+              </p>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );
